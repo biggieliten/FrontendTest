@@ -1,3 +1,5 @@
+ @use "_mixins" as mixin;
+
 .overlay{
    position: fixed;
     top: 0;
@@ -26,7 +28,13 @@
     justify-content: center;
     background-color: transparent;
     border: none;
-    font-size: clamp(2rem, 3vw, 3rem);
+	padding: 0.5rem;
+	border-radius: 50%;
+
+	&:hover {
+		transition: ease-in-out 0.3s;
+			background: #43434334;
+		}
 }
 
 .hamburgerMenu {
@@ -51,19 +59,21 @@
 
     ul {
         width: 100%;
-        padding: 0;
-        margin: 0;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
     }
 
     li {
         list-style: none;
         width: 100%;
-        text-align: center;
+        text-align: left;
+
+		&:hover {
+			background: #43434334;
+		}
 
         .listItem {
+			@include mixin.DMMonoFont(500);
             display: block;
             font-size: clamp(1.2rem, 2vw, 2rem);
             color: #222;
@@ -71,11 +81,12 @@
             padding: 1rem 0;
             transition: background 0.2s;
             border-radius: 8px;
+			margin-left: 1rem;
 
-            &:hover {
-                background: #f9637a22;
-            }
         }
+		hr{
+			opacity: 0.3;
+		}
     }
 }
 
