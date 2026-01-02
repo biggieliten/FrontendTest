@@ -22,17 +22,19 @@ const HeroWithTextAndButton = ({
   return (
     <>
       <div className={style}>
-        <h1 className="heroHeader">{headerContent}</h1>
+        {headerContent && <h1 className="heroHeader">{headerContent}</h1>}
         <img src={imgUrl} alt="" />
-        {(textContent || textHeader) && (
-          <div className="textSection">
-            <h2 className="textHeader">{textHeader}</h2>
-            <p className="heroText">{textContent}</p>
-          </div>
-        )}
-        {buttonContent && (
-          <button className="heroButton">{buttonContent}</button>
-        )}
+        <div className="contentContainer">
+          {(textContent || textHeader) && (
+            <div className="textSection">
+              <h2 className="textHeader">{textHeader}</h2>
+              <p className="heroText">{textContent}</p>
+              {buttonContent && (
+                <button className="heroButton">{buttonContent}</button>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
