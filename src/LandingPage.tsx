@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import HeroWithTextAndButton from "./components/HeroWithTextAndButton";
 import HamburgerMenu from "./components/HamburgerMenu";
 import CardWithButton from "./components/CardWithButton";
