@@ -1,5 +1,5 @@
 # 🖼️Frontend Test Application
-Simple webpage created with React, Typescript & SASS. 
+Simple web page created with React, Typescript & SASS. 
 Includes different components such as a Hamburger menu, Hero and Card. 
 The page is made to fit various screen sizes ranging from mobile to desktop devices.
 
