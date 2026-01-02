@@ -17,9 +17,9 @@ const HamburgerMenu = ({ isOpen, onToggle, options }: Props) => {
         onClick={onToggle}
       >
         {isOpen ? (
-          <RxCross1 className="crossIcon" size={24} />
+          <RxCross1 className="crossIcon" size={28} />
         ) : (
-          <GiHamburgerMenu className="hamburgerIcon" size={24} color="#fff" />
+          <GiHamburgerMenu className="hamburgerIcon" size={28} color="#fff" />
         )}
       </button>
       <div className={`overlay ${isOpen ? "open" : ""}`}>
@@ -28,9 +28,10 @@ const HamburgerMenu = ({ isOpen, onToggle, options }: Props) => {
             <ul>
               {options.map((option, index) => (
                 <li key={index}>
-                  <a href="" className="listItem">
+                  <a href="" className={`listItem ${option}`}>
                     {option}
                   </a>
+                  {index != options.length - 1 && <hr />}
                 </li>
               ))}
             </ul>
