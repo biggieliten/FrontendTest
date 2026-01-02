@@ -1,0 +1,11 @@
+@mixin DMSansFont($w : auto) {
+    font-family: "DM Sans", sans-serif;
+	font-weight: $w;
+    font-optical-sizing: auto;
+}
+
+@mixin DMMonoFont($w) {
+    font-family: "DM Mono", monospace;
+	font-weight: $w;
+    font-optical-sizing: auto;
+}
