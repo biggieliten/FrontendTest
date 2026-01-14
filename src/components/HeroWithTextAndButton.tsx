@@ -1,8 +1,6 @@
 type Props = {
-  //   hasText: boolean;
-  //   hasButton: boolean;
   imgUrl: string;
-  style?: string;
+  style: string;
   headerContent?: string;
   textHeader?: string;
   textContent?: string;
@@ -10,8 +8,6 @@ type Props = {
 };
 
 const HeroWithTextAndButton = ({
-  //   hasText,
-  //   hasButton,
   imgUrl,
   style,
   headerContent,
