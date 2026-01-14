@@ -1,20 +1,25 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import "../sass/HamburgerMenu.scss";
+import { useState } from "react";
 
 type Props = {
-  isOpen: boolean;
-  onToggle: () => void;
   options?: string[];
 };
 
-const HamburgerMenu = ({ isOpen, onToggle, options }: Props) => {
+const HamburgerMenu = ({ options }: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <button
         className="hamburgerButton"
         aria-label="Menu Button"
-        onClick={onToggle}
+        onClick={toggleMenu}
       >
         {isOpen ? (
           <RxCross1 className="crossIcon" size={28} />

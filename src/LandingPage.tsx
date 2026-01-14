@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import HeroWithTextAndButton from "./components/HeroWithTextAndButton";
 import HamburgerMenu from "./components/HamburgerMenu";
 import CardWithButton from "./components/CardWithButton";
@@ -7,17 +6,10 @@ import heroImg from "./assets/HeroImage.png";
 import cardImg1 from "./assets/CardImage1.png";
 import cardImg2 from "./assets/CardImage2.png";
 import "./sass/LandingPage.scss";
-import { useState } from "react";
 import content from "./assets/content.json";
 import houseSVG from "./assets/house.svg";
 
 function LandingPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <>
       <div className="landingPageContainer">
@@ -29,11 +21,7 @@ function LandingPage() {
           imgUrl={heroImg}
           style="heroLandingPage"
         />
-        <HamburgerMenu
-          isOpen={isMenuOpen}
-          options={["Home", "About", "Contact"]}
-          onToggle={toggleMenu}
-        />
+        <HamburgerMenu options={["Home", "About", "Contact"]} />
         <section className="aboutSection">
           <div className="aboutContent">
             <h1 className="aboutHeader">{content.aboutSection.header}</h1>
